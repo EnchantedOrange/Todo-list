@@ -1,73 +1,69 @@
 * {
-	box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
-	text-align: center;
-	background-color: #333;
-	font-family: Roboto;
-	width: 100%;
-}
+  text-align: center;
+  background-color: #333;
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  margin: 0; }
 
-#block {
-	width: 60%;
-	margin: 10% auto;
-}
+.block {
+  width: 60%;
+  margin: 10% auto; }
+  .block .input-div {
+    height: 10%;
+    width: 100%;
+    margin: 20px auto; }
+    .block .input-div .input {
+      font-size: 1.5rem;
+      height: 3rem;
+      width: 75%;
+      border: 0;
+      border-radius: 5px;
+      vertical-align: middle;
+      margin-right: 1rem;
+      padding: 5px; }
+    .block .input-div .add-button {
+      height: 3rem;
+      width: 15%;
+      max-width: 4rem;
+      border: 0;
+      border-radius: 5px;
+      font-size: 2rem;
+      font-weight: bold;
+      vertical-align: middle; }
+  .block .todolist {
+    width: 100%;
+    padding: 1em;
+    margin: auto;
+    list-style: none; }
+    .block .todolist li {
+      text-align: left;
+      color: #fff;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .block .todolist li .check-item {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px; }
+      .block .todolist li p {
+        font-size: 1.5rem;
+        word-wrap: break-word;
+        width: 75%;
+        height: 100%; }
+        .block .todolist li p.striked {
+          text-decoration: line-through;
+          color: #8b8b8b; }
+      .block .todolist li .delete-item {
+        font-size: 20px;
+        line-height: 20px;
+        width: 25px;
+        height: 25px;
+        border: 0;
+        border-radius: 5px;
+        padding: 0; }
 
-#input-div {
-	height: 10%;
-	width: 100%;
-	margin: auto;
-}
-
-#input {
-	font-size: 1.5rem;
-	height: 3rem;
-	width: 75%;
-	border: 0;
-	border-radius: 5px;
-	vertical-align: middle;
-	margin-right: 1rem;
-	padding: 5px;
-}
-
-#add-button {
-	height: 3rem;
-	width: 15%;
-	max-width: 4rem;
-	border: 0;
-	border-radius: 5px;
-	font-size: 2rem;
-	vertical-align: middle;
-}
-
-#todolist {
-	width: 100%;
-	padding: 1em;
-	margin: auto;
-}
-
-li {
-	list-style-type: none;
-	text-align: left;
-	color: white;
-	width: 100%;
-}
-
-li p{
-	display: inline-block;
-	font-size: 1.5rem;
-	word-wrap: break-word;
-	width: 75%;
-	height: 100%;
-}
-
-li button {
-	width: 2rem;
-	height: 2rem;
-	display: inline-block;
-	float: right;
-	border: 0;
-	border-radius: 5px;
-	margin: 1.8em;
-}
+/*# sourceMappingURL=main.css.map */

@@ -1,23 +1,18 @@
-function addListItem() {
-	var input = document.getElementById('input');
-	var text = input.value;
-	if (text !== '' && text.charAt(0) !== ' ') {
-		var li = document.createElement('li');
-		li.innerHTML = '<input type="checkbox" onclick="checkListItem()"></input><p>' + text + '</p><button onclick="deleteListItem()">X</button>';
-		document.getElementById('todolist').appendChild(li);
-	};
-	input.value = '';
-};
-function deleteListItem() {
-	var toRemove = event.target.parentNode;
-	toRemove.parentNode.removeChild(toRemove);
-};
-function checkListItem() {
-	var toCheck = event.target.nextSibling;
-	var checkText = toCheck.innerHTML;
-	if (!(checkText.startsWith('<strike>'))) {
-		toCheck.innerHTML = checkText.strike();
-	} else {
-		toCheck.innerHTML = checkText.slice(8, -9);
-	};
-};
+document.querySelector('.add-button').addEventListener('click', function() {
+    const text = document.querySelector('.input').value;
+    if (text !== '') {
+        const item = document.createElement('li');
+        item.innerHTML =
+            `<input type="checkbox" class="check-item">
+            <p>${text}</p>
+            <button class="delete-item">&#9932;</button>`;
+        item.querySelector('.check-item').addEventListener('click', function() {
+            event.currentTarget.nextElementSibling.classList.toggle('striked');
+        });
+        item.querySelector('.delete-item').addEventListener('click', function() {
+            document.querySelector('.todolist').removeChild(item);
+        });
+        document.querySelector('.todolist').appendChild(item);
+        document.querySelector('.input').value = '';
+    }
+});
